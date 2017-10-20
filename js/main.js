@@ -194,8 +194,10 @@
 			        	scrollTop: $('div[data-section="' + section + '"]').offset().top - topVal
 			    	}, 750);
 
-		    		$('body').toggleClass('fh5co-overflow offcanvas-visible');
-			    	
+						// $('body').toggleClass('fh5co-overflow offcanvas-visible');
+						if($(window).width() < 769){
+							$('.js-fh5co-nav-toggle').click();
+						}									    	
 			   }
 
 		    event.preventDefault();
